@@ -1,0 +1,11 @@
+{
+  "uuid": "yo@quackhack-mcblindy.com",
+  "name": "yo",
+  "description": "Control your `yo` clients from the top bar. Control each clients gain, mute/unmute or directly play a clients microphone on your speakers.",
+  "gettext-domain": "yo",
+  "shell-version": [
+    "50"
+  ],
+  "url": "https://github.com/quackhack-mcblindy/yo-gnome-shell-extension",
+  "version": 1
+}
