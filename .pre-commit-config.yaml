@@ -12,6 +12,10 @@ repos:
         exclude: '^(docs/|dist/|vendor/|.*\.snap$)'
       - id: check-yaml
         args: [--allow-multiple-documents]
-      #- id: check-added-large-files
-      #  args: [--maxkb=500]
       - id: check-merge-conflict
+      
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-json
+      - id: check-toml

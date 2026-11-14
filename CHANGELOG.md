@@ -9,7 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added `flake.nix`.
+
 ### Changed
+
+- Bump Gnome Shell to version 51.
 
 ### Fixed
 
