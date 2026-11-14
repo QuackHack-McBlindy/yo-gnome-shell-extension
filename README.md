@@ -10,7 +10,7 @@
 
 **This  is a GNOME desktop widget for <a href="https://github.com/QuackHack-McBlindy/yo">yo</a>.**
 
-This widget let's users control their clients microphone gain, mute/unmute and also output their microphone on the users speakers.<br> 
+This widget let's users control their clients microphone gain, mute/unmute and also output the clients microphone audio on the users speakers.<br> 
 
 
 <br>
@@ -24,6 +24,32 @@ git clone https://github.com/QuackHack-McBlindy/yo-gnome-shell-extension.git
 cd yo-gnome-shell-extension
 bash install.sh
 ```
+
+
+<details><summary><strong>
+❄️ Installing Using Flakes (NixOS)
+</strong></summary>
+
+
+#### **Add yo-gnome-shell-extension as an input in your flake:**
+
+```nix
+  inputs = {
+    nixpkgs.url   = "github:NixOS/nixpkgs/nixos-unstable";
+    yo-gnome-shell-extension.url = "github:quackhack-mcblindy/yo-gnome-shell-extension";
+  };
+```
+
+<br>
+The flake provides the extension as a package.<br>
+
+```nix
+{
+  environment.systemPackages = [ inputs.yo-gnome-shell-extension.packages.${pkgs.system}.default ];
+}
+```
+
+</details>
 
 <br>
 

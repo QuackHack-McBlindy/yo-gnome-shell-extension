@@ -80,8 +80,9 @@ class YoIndicator extends PanelMenu.Button {
         const popupWidth = Math.round(400 * 0.55);
 
         const root = new PopupMenu.PopupBaseMenuItem({ reactive: false, can_focus: false });
-        const content = new St.BoxLayout({
-            vertical: true, x_expand: true,
+        const content = new St.BoxLayout({//
+            orientation: Clutter.Orientation.VERTICAL,
+            x_expand: true,
             style: `min-width: ${popupWidth}px; max-width: ${popupWidth}px; `
                  + 'spacing: 8px; padding: 6px;',
         });
@@ -103,7 +104,8 @@ class YoIndicator extends PanelMenu.Button {
         this._updateMuteIcon();
 
         this._rowsBox = new St.BoxLayout({
-            vertical: true, x_expand: true, style: 'spacing: 8px;',
+            orientation: Clutter.Orientation.VERTICAL,
+            x_expand: true, style: 'spacing: 8px;',
         });
         content.add_child(this._rowsBox);
 
@@ -245,7 +247,8 @@ class YoIndicator extends PanelMenu.Button {
 
     _buildClientRow(client) {
         const container = new St.BoxLayout({
-            vertical: true, x_expand: true,
+            orientation: Clutter.Orientation.VERTICAL,
+            x_expand: true,
             style: 'spacing: 4px; padding: 2px 0px;',
         });
 
